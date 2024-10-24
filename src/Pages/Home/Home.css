@@ -1,0 +1,200 @@
+.home {
+  height: 100vh;
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    rgb(118, 118, 210) 40%,
+    rgb(70, 99, 212) 50%
+  );
+}
+.home-header p {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+.home-header select {
+  margin: 20px 35%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: #4646d4;
+  cursor: pointer;
+  outline: none;
+}
+.input-home {
+  width: 100%;
+  max-width: 500px;
+}
+.input-home input {
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+.languages-converter {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0px;
+  padding-bottom: 10px;
+}
+.languages-converter .text-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.image-exchange {
+  width: 50px; 
+  height: 50px;
+  margin: 30px 20px;
+  border-radius: 50%;
+  mix-blend-mode: color-burn;
+  object-fit: contain; 
+  cursor: pointer;
+}
+.languages-converter textarea {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+}
+.language-button {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 10px;
+}
+.language-button button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.language-button button:hover {
+  background-color: #333;
+}
+.language-button button:active {
+  transform: scale(0.95);
+}
+.language-button p {
+  font-size: 20px;
+  font-weight: 300;
+}
+.convert-parameter {
+  display: flex;
+  justify-content: space-between;
+}
+.convert-parameter .input,
+.convert-parameter .output {
+  flex: 1;
+  margin-right: 10px;
+}
+.convert-parameter .input,
+.convert-parameter .output p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+.convert-parameter select {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  outline: none;
+}
+.button {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.button button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button button:hover {
+  background-color: rgb(43, 39, 39);
+}
+.button p {
+  margin: 0;
+  font-size: 18px;
+}
+.result-home {
+  margin-top: 50px;
+  text-align: center;
+}
+.result-home p {
+  border: 2px solid #4646d4;
+  background: rgba(70, 99, 212, 0.9);
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.result-home p:hover {
+  transform: scale(1.05);
+}
+@media(max-width:705px) {
+  .home {
+    height: 110vh;
+  }
+  .home-header p {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+@media(max-width:600px) {
+  .home {
+    padding: 10px;
+    height: auto;
+  }
+  .home-header {
+    padding: 20px;
+  }
+  .home-header p {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .home-header select {
+    margin: 10px 20%;
+  }
+  .language-button button {
+    padding: 5px;
+  }
+  .language-button button p {
+    font-size: 15px;
+  }
+}
