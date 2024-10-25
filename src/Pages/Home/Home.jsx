@@ -17,6 +17,7 @@ const Home = () => {
   const [outputLanguage, setOutputLanguage] = useState("hi-IN");
   const [fromText, setFromText] = useState("");
   const [toText, setToText] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const inputHandler = (event) => {
     const { name, value } = event.target;
@@ -56,6 +57,7 @@ const Home = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     if (converterState === "language") {
       const response = await convertLanguage(fromText, inputLanguage, outputLanguage);
       setToText(response);
@@ -69,6 +71,7 @@ const Home = () => {
       const response = await findResult(data.text, converterState, inputUnit, outputUnit);
       setResult(response);
     }
+    setLoading(false);
   };
 
   const handleExchange = () => {
@@ -241,6 +244,22 @@ const Home = () => {
           <div className="result-home"><p>{result} {outputUnit}</p></div>
         ) 
         : 
+        null
+      }
+      {
+        loading ? 
+        (
+          <div className="loader">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        )
+        :
         null
       }
     </div>
