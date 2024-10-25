@@ -179,7 +179,7 @@
 @media(max-width:600px) {
   .home {
     padding: 10px;
-    height: auto;
+    height: 120vh;
   }
   .home-header {
     padding: 20px;
